@@ -1,0 +1,46 @@
+﻿@model Abc.Northwind.MvcUI.Models.ProductListVM
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stok</th>
+            </tr>
+
+            @foreach (var item in Model.Product)
+            {
+                <tr>
+                    <td>@item.ProductName</td>
+                    <td>@item.UnitPrice</td>
+                    <td>@item.UnitsInStock</td>
+                </tr>
+            }
+
+
+        </table>
+
+    </div>
+</body>
+</html>
