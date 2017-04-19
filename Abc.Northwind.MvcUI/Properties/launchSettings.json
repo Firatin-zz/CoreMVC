@@ -16,7 +16,7 @@
       }
     },
     "Abc.Northwind.MvcUI": {
-      "commandName": "Project",
+      "commandName": "IISExpress",
       "launchBrowser": true,
       "launchUrl": "http://localhost:5000",
       "environmentVariables": {

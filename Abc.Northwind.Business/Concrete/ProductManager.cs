@@ -32,7 +32,7 @@ namespace Abc.Northwind.Business.Concrete
 
         public void Delete(int productId)
         {
-            _productDal.Delete(new Product { ProdutID = productId });
+            _productDal.Delete(new Product { ProductID = productId });
         }
 
         public void Update(Product product)

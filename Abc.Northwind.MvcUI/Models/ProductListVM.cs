@@ -8,6 +8,6 @@ namespace Abc.Northwind.MvcUI.Models
 {
     public class ProductListVM
     {
-        public List<Product> Product { get; set; }
+        public List<Product> Products { get; set; }
     }
 }
