@@ -1,32 +1,10 @@
 ﻿@model Abc.Northwind.MvcUI.Models.ProductListVM
 @{
-    Layout = null;
+    Layout = "~/Views/_Layout.cshtml";
 }
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-    <style>
-            table {
-                font-family: arial, sans-serif;
-                border-collapse: collapse;
-                width: 100%;
-            }
 
-            td, th {
-                border: 1px solid #dddddd;
-                text-align: left;
-                padding: 8px;
-            }
-
-            tr:nth-child(even) {
-                background-color: #dddddd;
-            }
-        </style>
-</head>
-<body>
     <div>
-        <table>
+        <table class="table table-responsive">
             <tr>
                 <th>Name</th>
                 <th>Price</th>
@@ -43,7 +21,4 @@
 
 
         </table>
-
     </div>
-</body>
-</html>
