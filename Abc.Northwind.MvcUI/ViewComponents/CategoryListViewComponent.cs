@@ -21,7 +21,8 @@ namespace Abc.Northwind.MvcUI.ViewComponents
         {
             var model = new CategoryListVM
             {
-                Categories = _categoryService.GetAll()
+                Categories = _categoryService.GetAll(),
+                CurrentCategory = Convert.ToInt16(HttpContext.Request.Query["category"])
             };
             return View(model);
         }

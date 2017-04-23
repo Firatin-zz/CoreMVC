@@ -9,5 +9,6 @@ namespace Abc.Northwind.MvcUI.Models
     public class CategoryListVM
     {
         public List<Category> Categories { get; internal set; }
+        public short CurrentCategory { get; internal set; }
     }
 }
