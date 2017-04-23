@@ -1,6 +1,7 @@
 ﻿using Abc.Northwind.Business.Abstract;
 using Abc.Northwind.MvcUI.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,13 +15,15 @@ namespace Abc.Northwind.MvcUI.Controllers
         {
             _productService = productService;
         }
-        public ActionResult Index()
+        public ActionResult Index(int page=1,int category=0)
         {
-            var products = _productService.GetAll();
+            int pageSize = 10;
+            //var products = _productService.GetAll();//
+            var products = _productService.GetByCategory(category);
 
             ProductListVM model = new ProductListVM
             {
-                Products = products
+                Products = products.Skip((page - 1) * pageSize).Take(pageSize).ToList()//diyoruz ki: varsayılan pagigng 1 ve sıralama pagesize değeri kadar olsun. Bu işlem örn param 2 geldi 2-1*10=10 yani ilk 10 ürünü atla
             };
 
             return View(model);

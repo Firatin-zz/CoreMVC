@@ -22,7 +22,7 @@ namespace Abc.Northwind.Business.Concrete
 
         public List<Product> GetByCategory(int categoryId)
         {//veritabanına getlist üzerinden sorgumuzu gönderiyoruz.
-            return _productDal.GetList(p => p.CategoryID == categoryId);
+            return _productDal.GetList(p => p.CategoryID == categoryId || categoryId == 0);
         }
 
         public void Add(Product product)

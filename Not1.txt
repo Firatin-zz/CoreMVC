@@ -40,3 +40,5 @@
 
 
 	+Configure performans artýþý burda saðlanýr. Hata yakalama, loglama süreçleri vs middle vaiereler burda yazýlýr.
+
+	**NOT: :Net core'da partial viewlar yerine view componentler gelmiþtir.
