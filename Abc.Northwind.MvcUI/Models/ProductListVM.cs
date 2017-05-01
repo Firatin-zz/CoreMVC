@@ -9,5 +9,9 @@ namespace Abc.Northwind.MvcUI.Models
     public class ProductListVM
     {
         public List<Product> Products { get; set; }
+        public int PageCount { get; internal set; }
+        public int PageSize { get; internal set; }
+        public int CurrentCategory { get; internal set; }
+        public int CurrentPage { get; internal set; }
     }
 }

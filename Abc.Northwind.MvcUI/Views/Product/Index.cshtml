@@ -1,24 +1,30 @@
 ﻿@model Abc.Northwind.MvcUI.Models.ProductListVM
+
 @{
     Layout = "~/Views/_Layout.cshtml";
 }
 
-    <div>
-        <table class="table table-responsive">
-            <tr>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Stok</th>
-            </tr>
-            @foreach (var product in Model.Products)
+<div>
+    <table class="table table-responsive">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Stok</th>
+        </tr>
+        @foreach (var product in Model.Products)
             {
-                <tr>
-                    <td>@product.ProductName</td>
-                    <td>@product.UnitPrice</td>
-                    <td>@product.UnitsInStock</td>
-                </tr>
-            }
+            <tr>
+                <td>@product.ProductName</td>
+                <td>@product.UnitPrice</td>
+                <td>@product.UnitsInStock</td>
+            </tr>
+        }
 
 
-        </table>
-    </div>
+    </table>
+</div>
+<product-list-pager Current-Category="@Model.CurrentCategory"
+                    Current-Page="@Model.CurrentPage"
+                    Page-Count="@Model.PageCount"
+                    Page-Size="@Model.PageSize">
+</product-list-pager>

@@ -42,3 +42,6 @@
 	+Configure performans artýþý burda saðlanýr. Hata yakalama, loglama süreçleri vs middle vaiereler burda yazýlýr.
 
 	**NOT: :Net core'da partial viewlar yerine view componentler gelmiþtir.
+
+
+	**+ Kendi tag helperimizi sayfalama vesaire olarak kullanmak için PagingTagHelpers clasý altýnda yazdýk. Ýndex view'da using olarak @addTagHelper"*,xx"" eklemek ve diðer sayfalarda ayný iþlemi yapmak yerine bir tane 'MVC views import page' ekleyip orda tanýmlayarak her yerde kullana bileceðiz.
